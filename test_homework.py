@@ -34,6 +34,8 @@ def test_dark_theme_by_time_and_user_choice():
             is_dark_theme = False
         else:
             is_dark_theme = True
+    else:
+        is_dark_theme = False
     assert is_dark_theme is True
 
 
@@ -61,7 +63,7 @@ def test_find_suitable_user():
     suitable_users = []
     for user in users:
         if user["age"] < 20:
-            suitable_users.append(users)
+            suitable_users.append(user)
 
     assert suitable_users == [
         {"name": "Stanislav", "age": 15},
